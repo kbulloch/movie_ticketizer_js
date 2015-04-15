@@ -1,22 +1,20 @@
-describe('BankAccount',function() {
+describe('TicketMuncher',function() {
 
-  describe("deposit()", function() {
+  describe("getPrice()", function() {
 
-    it("will add the amount specified to the balance", function() {
-      var testAccount = Object.create(BankAccount);
-      testAccount.deposit(100);
-      expect(testAccount.balance).to.equal(100);
+    it("will return the price of the ticket based on user inputs", function() {
+      var testTicket = Object.create(Ticket);
+      testTicket.movie_name = "Titanus";
+      testTicket.movie_time = 0;
+      testTicket.age_bracket = 0;
+      testTicket.release_year = 1996;
+      expect(testTicket.getPrice()).to.equal(10);
     });
 
-  });
-
-  describe("withdraw()", function() {
-
-    it("will subtract the amount specified from the balance", function() {
-      var testAccount = Object.create(BankAccount);
-      testAccount.deposit(100);
-      testAccount.withdraw(100);
-      expect(testAccount.balance).to.equal(0);
+    it("will return the price of the ticket based on the users age bracket", function() {
+      var testTicket = Object.create(Ticket);
+      testTicket.age_bracket = 1;
+      expect(testTicket.getPrice()).to.equal(8)
     });
 
   });
