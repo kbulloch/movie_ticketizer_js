@@ -11,6 +11,7 @@ var BankAccount = {
 $(document).ready(function() {
 
   var newAccount = Object.create(BankAccount);
+  $("#transaction-container").hide();
 
   $("form#create-account").submit(function(event) {
     event.preventDefault();
@@ -22,6 +23,7 @@ $(document).ready(function() {
     newAccount.balance = initial_deposit;
 
     $("#account-balance").text(newAccount.balance);
+    $("#transaction-container").show();
   });
 
   $("form#transaction").submit(function(event) {
