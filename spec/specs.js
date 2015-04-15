@@ -26,6 +26,14 @@ describe('TicketMuncher',function() {
       expect(testTicket.getPrice()).to.equal(12);
     });
 
+    it("will make a really cheap ticket for all discounts applied at once", function() {
+      var testTicket = Object.create(Ticket);
+      testTicket.age_bracket = 1;
+      testTicket.movie_time = 1;
+      testTicket.release_year = 1;
+      expect(testTicket.getPrice()).to.equal(8);
+    });
+
   });
 
 });
