@@ -1,8 +1,59 @@
 <html>
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/scripts.js"></script>
   <title>The Bank Machine</title>
 </head>
 <body>
-    
+  <div class="container">
+    <h1>Welcome to the Bank!</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>
+          Sign up for a bank account:
+        </p>
+
+        <form id="create-account">
+          <div class="form-group">
+            <input type="text" id="name" class="form-control" placeholder="Your name">
+          </div>
+
+          <div class="form-group">
+            <input type="number" id="initial-deposit" class="form-control" placeholder="Initial deposit">
+          </div>
+
+          <button type="submit" class="btn btn-default">Create bank account</button>
+        </form>
+      </div>
+
+      <div class="col-sm-6">
+        <p>
+          Deposit or withdraw money:
+        </p>
+
+        <form id="transaction">
+          <div class="form-group">
+            <input type="number" id="deposit" class="form-control" placeholder="Deposit amount">
+          </div>
+          <div class="form-group">
+            <input type="number" id="withdraw" class="form-control" placeholder="Withdraw amount">
+          </div>
+
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <h3>Your bank account's balance</h3>
+
+        <div class="account-status">
+          <p>$ <span id="account-balance"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
