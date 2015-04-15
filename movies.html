@@ -11,49 +11,37 @@
     <div class="row">
       <div class="col-sm-6">
         <p>
-          Sign up for a bank account:
+          Find a movie ticket:
         </p>
 
-        <form id="create-account">
+        <form id="find-ticket">
           <div class="form-group">
-            <input type="text" id="name" class="form-control" placeholder="Your name">
+            <select id="movie_time">
+              <option value=0>Evening</option>
+              <option value=1>Matinee</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="age_bracket">
+              <option value=0>Adult</option>
+              <option value=1>Senior/Student</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="release_year">
+              <option value=0>New</option>
+              <option value=1>Nostalgic</option>
+            </select>
           </div>
 
-          <div class="form-group">
-            <input type="number" id="initial-deposit" class="form-control" placeholder="Initial deposit">
-          </div>
-
-          <button type="submit" class="btn btn-default">Create bank account</button>
+          <button type="submit" class="btn btn-default">Find a ticket</button>
         </form>
       </div>
-
-      <div class="col-sm-6" id="transaction-container">
-        <p>
-          Deposit or withdraw money:
-        </p>
-
-        <form id="transaction">
-          <div class="form-group">
-            <input type="number" id="deposit" class="form-control" placeholder="Deposit amount">
-          </div>
-          <div class="form-group">
-            <input type="number" id="withdraw" class="form-control" placeholder="Withdraw amount">
-          </div>
-
-          <button type="submit" class="btn btn-success">Submit</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-4 col-sm-offset-4">
-        <h3>Your bank account's balance</h3>
-
-        <div class="account-status">
-          <p>$ <span id="account-balance"></span></p>
-        </div>
+      <div class="col-sm-4">
+        <h3>Your movie ticket will cost $ <span id="account-balance"></span></h3>
       </div>
     </div>
   </div>
+
 </body>
 </html>
