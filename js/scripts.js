@@ -1,6 +1,8 @@
 var Ticket = {
   getPrice: function() {
-    return 10 - (this.age_bracket * 2);
+    return 15 - (this.age_bracket * 2)
+              - (this.movie_time * 2)
+              - (this.release_year * 3);
   }
 };
 
